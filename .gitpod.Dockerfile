@@ -1,6 +1,6 @@
 FROM gitpod/workspace-full
 
-RUN apt-get update && apt-get install mysql-client -y
+RUN sudo apt-get update && sudo apt-get install mysql-client -y
 
 USER gitpod
 
