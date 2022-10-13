@@ -1,5 +1,6 @@
-# DevNet-Labs
-A series of AppDynamics learning labs on DevNet
+# AppDynamics Java 101 lab
+
+## ToDo
 
 - download Tomcat 9 and install sample application
 
@@ -10,10 +11,10 @@ mv apache-tomcat-9.0.68 tomcat9
 cp Supercar-Trader.war tomcat9/webapps/
 ```
 
-- start up MySQL
+- start up MySQL container
 
 ```
-docker run -p 3306:3306 -e MYSQL_ROOT_PASSWORD=xxxxxxxxxxx mysql:5.7
+docker run -d -p 3306:3306 -e MYSQL_ROOT_PASSWORD=xxxxxxxxxxx mysql:5.7
 ```
 
 https://hub.docker.com/_/mysql
@@ -30,3 +31,10 @@ https://hub.docker.com/_/mysql
 
 https://8080-appdynamics-partnerlab1-xxxxxxxxxx.ws-usXX.gitpod.io/Supercar-Trader/home.do
 (add /Supercar-Trader/home.do to the URL in preview window)
+
+- generate load 
+
+```
+cd Load-Generator/phantomjs
+./start_load.sh
+```
