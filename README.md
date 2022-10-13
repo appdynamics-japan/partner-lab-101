@@ -28,6 +28,14 @@ https://hub.docker.com/_/mysql
 ./tomcat9/bin/startup.sh
 ```
 
+- populate data into Supercar Trader tables
+
+```
+mysql -h127.0.0.1 -uroot -p'XXXXXXXXXXXXXX' < supercars.sql
+```
+
+MySQL root password can be found in tomcat9/webapps/Supercar-Trader/META-INF/context.xml
+
 
 - Supercar Trader application URL should be as below:
 
