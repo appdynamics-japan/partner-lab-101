@@ -15,3 +15,8 @@ start up Tomcat 9
 ```
 ./tomcat9/bin/startup
 ```
+
+
+Supercar Trader URL:
+
+https://8080-appdynamics-partnerlab1-xxxxxxxxxx.ws-usXX.gitpod.io/Supercar-Trader/home.do
