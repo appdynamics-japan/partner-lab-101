@@ -13,7 +13,7 @@ cp Supercar-Trader.war tomcat9/webapps/
 start up Tomcat 9
 
 ```
-./tomcat9/bin/startup
+./tomcat9/bin/startup.sh
 ```
 
 
