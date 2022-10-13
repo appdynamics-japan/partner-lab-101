@@ -2,7 +2,7 @@
 
 ## ToDo
 
-- download Tomcat 9 and install sample application
+- download Tomcat 9 and deploy sample application (Supercar Trader)
 
 ```
 wget https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.68/bin/apache-tomcat-9.0.68.tar.gz
@@ -11,11 +11,13 @@ mv apache-tomcat-9.0.68 tomcat9
 cp Supercar-Trader.war tomcat9/webapps/
 ```
 
-- start up MySQL container
+- start up MySQL 5.7 container
 
 ```
 docker run -d -p 3306:3306 -e MYSQL_ROOT_PASSWORD=xxxxxxxxxxx mysql:5.7
 ```
+
+root password can be found in tomcat9/webapps/Supercar-Trader/META-INF/context.xml, once Tomcat9 started
 
 https://hub.docker.com/_/mysql
 
@@ -30,7 +32,7 @@ https://hub.docker.com/_/mysql
 - Supercar Trader application URL should be as below:
 
 https://8080-appdynamics-partnerlab1-xxxxxxxxxx.ws-usXX.gitpod.io/Supercar-Trader/home.do
-(add /Supercar-Trader/home.do to the URL in preview window)
+(add /Supercar-Trader/home.do to the URL in port 8080 preview window)
 
 - generate load 
 
