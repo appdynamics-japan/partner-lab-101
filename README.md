@@ -20,7 +20,7 @@ docker run -d -p 3306:3306 -e MARIADB_ALLOW_EMPTY_ROOT_PASSWORD=1 mariadb
 - populate data into Supercar Trader tables
 
 ```bash
-mysql -h127.0.0.1 -uroot < supercars.sql
+mariadb -h127.0.0.1 -uroot < supercars.sql
 ```
 
 make sure application data with MariaDB Monitor
@@ -65,7 +65,7 @@ MariaDB [supercars]> select * from MANUFACTURER;
 
 - Extract Java Agent and configure
 
-```bash
+```
 mkdir java-agent
 cd java-agent
 unzip ../AppServerAgent-1.8-22.9.1.34265.zip
@@ -77,7 +77,7 @@ edit java-agent/conf/controller-info.xml
 
 ```bash
 # tomcat9/bin/setenv.sh
-export CATALINA_OPTS="$CATALINA_OPTS -javaagent:/workspace/partner-lab-101/java-agent/javaagent.jar"
+export CATALINA_OPTS="$CATALINA_OPTS -javaagent:$GITPOD_REPO_ROOT/java-agent/javaagent.jar"
 ```
 
 - start up Tomcat 9
@@ -86,11 +86,13 @@ export CATALINA_OPTS="$CATALINA_OPTS -javaagent:/workspace/partner-lab-101/java-
 ./tomcat9/bin/startup.sh
 ```
 
-Supercar Trader application URL should be as below:
+- Supercar Trader application URL should be as below:
 
 https://8080-appdynamics-partnerlab1-xxxxxxxxxx.ws-usXX.gitpod.io/Supercar-Trader/home.do
-
 (add /Supercar-Trader/home.do to the URL in port 8080 preview window)
+
+
+[Instrument Apache Tomcat](https://docs.appdynamics.com/appd/22.x/latest/en/application-monitoring/install-app-server-agents/java-agent/install-the-java-agent/agent-installation-by-java-framework/apache-tomcat-startup-settings)
 
 - generate load 
 

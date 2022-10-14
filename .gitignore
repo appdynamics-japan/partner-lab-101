@@ -3,6 +3,13 @@
 *.psd
 /target/
 
+java-agent/
+phantomjs/
+load-generator/*.out
+load-generator/*.png
+tomcat9/
+appd-downloader
+
 *.class
 
 *.zip
