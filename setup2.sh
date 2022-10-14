@@ -1,10 +1,14 @@
-#!/bin/sh
+#!/bin/sh -x
 
 cp -pf controller-info.xml java-agent/conf/
 
 ./tomcat9/bin/startup.sh
 
-wget https://bitbucket.org/ariya/phantomjs/downloads/phantomjs-2.1.1-linux-x86_64.tar.bz2
+if [ -f phantomjs-2.1.1-linux-x86_64.tar.bz2 ] ; then
+    echo "You have phantomjs tarball."
+else
+    wget https://bitbucket.org/ariya/phantomjs/downloads/phantomjs-2.1.1-linux-x86_64.tar.bz2
+fi
 tar xf phantomjs-2.1.1-linux-x86_64.tar.bz2
 mv phantomjs-2.1.1-linux-x86_64 phantomjs 
 cd load-generator
