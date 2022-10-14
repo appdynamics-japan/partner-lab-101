@@ -96,9 +96,9 @@ https://8080-appdynamics-partnerlab1-xxxxxxxxxx.ws-usXX.gitpod.io/Supercar-Trade
 
 - generate load 
 
-```
+```bash
 export DISPLAY=:0    
 export QT_QPA_PLATFORM='offscreen'
-cd Load-Generator/phantomjs
-sh ./start_load.sh
+cd load-generator
+PATH=/workspace/partner-lab-101/phantomjs-2.1.1-linux-x86_64/bin:${PATH} sh start_load.sh
 ```
