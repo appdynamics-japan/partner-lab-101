@@ -1,5 +1,7 @@
 #!/bin/sh
 
+cp -pf controller-info.xml java-agent/conf/
+
 ./tomcat9/bin/startup.sh
 
 wget https://bitbucket.org/ariya/phantomjs/downloads/phantomjs-2.1.1-linux-x86_64.tar.bz2
