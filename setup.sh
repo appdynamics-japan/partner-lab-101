@@ -7,3 +7,5 @@ wget https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.68/bin/apache-tomcat-9.0.68.t
 tar xvf apache-tomcat-9.0.68.tar.gz
 mv apache-tomcat-9.0.68 tomcat9
 cp Supercar-Trader.war tomcat9/webapps/
+./tomcat9/bin/startup.sh
+
