@@ -1,8 +1,6 @@
 FROM gitpod/workspace-full
 
 RUN sudo apt-get update && sudo apt-get install mariadb-client -y 
-# RUN sudo apt-get update && sudo apt-get install mariadb-client -y && sudo apt-get install -y readline &&  sudo apt-get install -y readline
-
 
 USER gitpod
 
