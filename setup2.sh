@@ -1,4 +1,4 @@
-#!/bin/sh -x
+#!/bin/sh
 
 cp -pf controller-info.xml java-agent/conf/
 

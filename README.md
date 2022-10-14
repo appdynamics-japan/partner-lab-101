@@ -2,7 +2,7 @@
 
 ## ToDo
 
-- download Tomcat 9 and deploy sample application (Supercar Trader)
+- Download Tomcat 9 and deploy sample application (Supercar Trader)
 
 ```
 wget https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.68/bin/apache-tomcat-9.0.68.tar.gz
@@ -11,13 +11,13 @@ mv apache-tomcat-9.0.68 tomcat9
 cp Supercar-Trader.war tomcat9/webapps/
 ```
 
-- start up MariaDB container
+- Start up MariaDB container
 
 ```bash
 docker run -d -p 3306:3306 -e MARIADB_ALLOW_EMPTY_ROOT_PASSWORD=1 mariadb
 ```
 
-- populate data into Supercar Trader tables
+- Populate data into Supercar Trader tables
 
 ```bash
 mariadb -h127.0.0.1 -uroot < supercars.sql
@@ -80,7 +80,7 @@ edit java-agent/conf/controller-info.xml
 export CATALINA_OPTS="$CATALINA_OPTS -javaagent:$GITPOD_REPO_ROOT/java-agent/javaagent.jar"
 ```
 
-- start up Tomcat 9
+- Start up Tomcat 9
 
 ```bash
 ./tomcat9/bin/startup.sh
@@ -91,10 +91,7 @@ export CATALINA_OPTS="$CATALINA_OPTS -javaagent:$GITPOD_REPO_ROOT/java-agent/jav
 https://8080-appdynamics-partnerlab1-xxxxxxxxxx.ws-usXX.gitpod.io/Supercar-Trader/home.do
 (add /Supercar-Trader/home.do to the URL in port 8080 preview window)
 
-
-[Instrument Apache Tomcat](https://docs.appdynamics.com/appd/22.x/latest/en/application-monitoring/install-app-server-agents/java-agent/install-the-java-agent/agent-installation-by-java-framework/apache-tomcat-startup-settings)
-
-- generate load 
+- Generate load 
 
 ```bash
 cd load-generator
