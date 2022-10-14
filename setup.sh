@@ -14,3 +14,6 @@ wget https://bitbucket.org/ariya/phantomjs/downloads/phantomjs-2.1.1-linux-x86_6
 tar xf phantomjs-2.1.1-linux-x86_64.tar.bz2
 mv phantomjs-2.1.1-linux-x86_64 phantomjs 
 PATH=/workspace/partner-lab-101/phantomjs/bin:${PATH} sh start_load.sh
+
+
+
