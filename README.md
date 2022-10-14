@@ -65,7 +65,7 @@ MariaDB [supercars]> select * from MANUFACTURER;
 
 - Extract Java Agent and configure
 
-```
+```bash
 mkdir java-agent
 cd java-agent
 unzip ../AppServerAgent-1.8-22.9.1.34265.zip
@@ -86,13 +86,11 @@ export CATALINA_OPTS="$CATALINA_OPTS -javaagent:/workspace/partner-lab-101/java-
 ./tomcat9/bin/startup.sh
 ```
 
-- Supercar Trader application URL should be as below:
+Supercar Trader application URL should be as below:
 
 https://8080-appdynamics-partnerlab1-xxxxxxxxxx.ws-usXX.gitpod.io/Supercar-Trader/home.do
+
 (add /Supercar-Trader/home.do to the URL in port 8080 preview window)
-
-
-[Instrument Apache Tomcat](https://docs.appdynamics.com/appd/22.x/latest/en/application-monitoring/install-app-server-agents/java-agent/install-the-java-agent/agent-installation-by-java-framework/apache-tomcat-startup-settings)
 
 - generate load 
 

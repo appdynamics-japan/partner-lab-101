@@ -20,4 +20,4 @@ curl -Lk https://github.com/csek06/appd-binary-downloader/raw/master/cmd/appd-do
 ./appd-downloader -java -version=22.9.1 -automate
 unzip -q -d java-agent AppServerAgent-1.8-22.9.1.34265.zip
 
-echo "\n\n********************************\nEdit java-agent/conf/controller-info.xml\n\nthen execute setup2.sh\n"
+echo "\n\n****************************************\nEdit java-agent/conf/controller-info.xml\n\nthen execute setup2.sh\n"

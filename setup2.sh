@@ -4,6 +4,9 @@ cp -pf controller-info.xml java-agent/conf/
 
 ./tomcat9/bin/startup.sh
 
+URL=`gp url 8080`
+echo "\n\n$URL/Supercar-Trader/home.do\n\n"
+
 if [ -f phantomjs-2.1.1-linux-x86_64.tar.bz2 ] ; then
     echo "You have phantomjs tarball."
 else
