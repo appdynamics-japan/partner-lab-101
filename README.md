@@ -14,7 +14,7 @@ cp Supercar-Trader.war tomcat9/webapps/
 - start up MySQL 5.7 container
 
 ```
-docker run -d -p 3306:3306 -e MYSQL_ROOT_PASSWORD=xxxxxxxxxxx mysql:5.7
+docker run -d -p 3306:3306 -e MYSQL_ALLOW_EMPTY_PASSWORD mysql:5.7
 ```
 
 root password can be found in tomcat9/webapps/Supercar-Trader/META-INF/context.xml, once Tomcat9 started
