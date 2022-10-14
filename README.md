@@ -73,7 +73,7 @@ unzip ../AppServerAgent-1.8-22.9.1.34265.zip
 
 edit java-agent/conf/controller-info.xml
 
-- instrument APpDynamics Java Agent to Tomcat
+- [instrument AppDynamics Java Agent to Tomcat](https://docs.appdynamics.com/appd/22.x/latest/en/application-monitoring/install-app-server-agents/java-agent/install-the-java-agent/agent-installation-by-java-framework/apache-tomcat-startup-settings#id-.ApacheTomcatStartupSettingsv22.1-InstrumentApacheTomcat)
 
 ```bash
 # tomcat9/bin/setenv.sh
@@ -97,6 +97,8 @@ https://8080-appdynamics-partnerlab1-xxxxxxxxxx.ws-usXX.gitpod.io/Supercar-Trade
 - generate load 
 
 ```
+export DISPLAY=:0    
+export QT_QPA_PLATFORM='offscreen'
 cd Load-Generator/phantomjs
 sh ./start_load.sh
 ```
