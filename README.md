@@ -66,9 +66,7 @@ MariaDB [supercars]> select * from MANUFACTURER;
 - Extract Java Agent and configure
 
 ```
-mkdir java-agent
-cd java-agent
-unzip ../AppServerAgent-1.8-22.9.1.34265.zip
+unzip -d java-agent AppServerAgent-1.8-22.9.1.34265.zip
 ```
 
 edit java-agent/conf/controller-info.xml
